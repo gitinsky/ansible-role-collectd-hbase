@@ -1,0 +1,5 @@
+---
+- name: put collectd config file
+  template: src=hbase.conf dest=/etc/collectd/collectd.conf.d/hbase.conf owner=root group=root mode=0644
+  notify:
+  - restart collectd
